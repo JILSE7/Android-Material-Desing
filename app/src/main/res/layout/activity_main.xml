@@ -276,7 +276,44 @@
                     android:layout_marginTop="16dp"
                     android:text="Enable Password"
                     />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/swFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.786"
+                    app:layout_constraintStart_toEndOf="@+id/cbEnablePass"
+                    android:text="Show fab"
+                    android:checked="true"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_layout_password" />
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/cbEnablePass"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/chip"
+                    android:valueFrom="0.0"
+                    android:valueTo="10.0"
+                    android:value="6.0"
+                    android:stepSize="2"
+                    app:layout_constraintTop_toBottomOf="@+id/cbEnablePass" />
+                    />
                 
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/slider"
+                    app:layout_constraintBottom_toTopOf="@+id/divider"
+                    android:checkable="true"
+                    android:text="saidnnn@g,ail.com"
+                    />
                 <View
                     android:id="@+id/divider"
                     android:layout_width="match_parent"
@@ -320,6 +357,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/subtitle2"
                     android:layout_marginTop="16dp"
+                    app:singleSelection="true"
                     >
                     <Button
                         android:id="@+id/btn_red"
